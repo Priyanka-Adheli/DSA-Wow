@@ -1,5 +1,4 @@
 import { useState,useEffect,useRef } from "react";
-
 const codeSnippets = {
   cpp: `#include <iostream>
 using namespace std;
