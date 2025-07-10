@@ -4,55 +4,53 @@ const codeSnippets = {
   cpp: `#include <iostream>
 using namespace std;
 
-int binarySearch(int arr[], int size, int target) {
-    int low = 0, high = size - 1;
-    while (low <= high) {
-        int mid = low + (high - low) / 2;
-        if (arr[mid] == target) return mid;
-        else if (arr[mid] < target) low = mid + 1;
-        else high = mid - 1;
+int linearSearch(int arr[], int size, int target) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == target) {
+            return i; // Return index if found
+        }
     }
-    return -1; // Not found
+    return -1; // Return -1 if not found
 }
 
 int main() {
     int arr[] = {10, 20, 30, 40, 50};
     int target = 30;
-    int index = binarySearch(arr, 5, target);
+    int index = linearSearch(arr, 5, target);
     cout << (index != -1 ? "Found at index " + to_string(index) : "Not found") << endl;
     return 0;
 };`,
 
-  java: `public class BinarySearch {
-    public static int binarySearch(int[] arr, int target) {
-        int low = 0, high = arr.length - 1;
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-            if (arr[mid] == target) return mid;
-            else if (arr[mid] < target) low = mid + 1;
-            else high = mid - 1;
+  java: `public class LinearSearch {
+    public static int linearSearch(int[] arr, int target) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                return i; // Return index if found
+            }
         }
-        return -1; // Not found
+        return -1; // Return -1 if not found
     }
 
     public static void main(String[] args) {
         int[] arr = {10, 20, 30, 40, 50};
         int target = 30;
-        int index = binarySearch(arr, target);
+        int index = linearSearch(arr, target);
         System.out.println(index != -1 ? "Found at index " + index : "Not found");
     }
 };`,
 
-  js: `function binarySearch(arr, target) {
-    let low = 0, high = arr.length - 1;
-    while (low <= high) {
-        let mid = Math.floor(low + (high - low) / 2);
-        if (arr[mid] === target) return mid;
-        else if (arr[mid] < target) low = mid + 1;
-        else high = mid - 1;
+  js: `function linearSearch(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
+            return i; // Return index if found
+        }
     }
-    return -1; // Not found
-}`
+    return -1; // Return -1 if not found
+}
+
+const numbers = [10, 20, 30, 40, 50];
+const target = 30;
+console.log(linearSearch(numbers, target)); // Output: 2`
 };
 const BinarySearch =() =>{
   const [array, setArray] = useState([]);
