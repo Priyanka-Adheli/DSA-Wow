@@ -147,6 +147,8 @@ const Queue = () =>{
   )
 }
 </div>
+                   <div className='bg-white rounded-xl shadow-md p-6 border border-gray-200'>{error || "Queue Info Status"}</div>
+
 <style>
        {`
           @keyframes popUp {
