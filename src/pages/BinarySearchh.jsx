@@ -57,11 +57,6 @@ const numbers = [10, 20, 30, 40, 50];
 const target = 30;
 console.log(binarySearch(numbers, target)); // Output: 2`
 };
-
-const numbers = [10, 20, 30, 40, 50];
-const target = 30;
-console.log(linearSearch(numbers, target)); // Output: 2`
-};
 const BinarySearch =() =>{
   const [array, setArray] = useState([]);
   const [target, setTarget] = useState('');
