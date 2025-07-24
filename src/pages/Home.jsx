@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center text-center px-4">
       <h1 className="text-4xl lg:text-5xl font-extrabold mb-6">
-        Welcome to DSAWOW
+        Welcome to DSAView
       </h1>
 
       <h1 className="text-lg lg:text-xl text-gray-700 mb-8 max-w-xl">
