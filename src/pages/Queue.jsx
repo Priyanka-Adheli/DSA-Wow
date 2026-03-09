@@ -85,7 +85,7 @@ const Queue = () =>{
         setDivs(div);
 
         setTimeout(()=>{
-            setDivs(div.slice(0,-1));
+           setDivs(div.slice(1));
         },500);
     }
     return(
