@@ -70,24 +70,24 @@ const Queue = () =>{
         setDivs([...divs,newDiv]);
     }
 
+const removeDiv = () => {
 
-    const removeDiv = ()=>{
-        
-        if(divs.length==0)
-        {
-            setError("Queue is Empty!");
-            return;
-        }
-
-        let div = [...divs];
-        div[divs.length-1].animation = "animate-[fadeOut_0.5s_forwards]";
-
-        setDivs(div);
-
-        setTimeout(()=>{
-           setDivs(div.slice(1));
-        },500);
+    if(divs.length === 0){
+        setError("Queue is Empty!");
+        return;
     }
+
+    let div = [...divs];
+
+    // animate first element
+    div[0].animation = "animate-[fadeOut_0.5s_forwards]";
+
+    setDivs(div);
+
+    setTimeout(()=>{
+        setDivs(div.slice(1)); // remove first element
+    },500);
+}
     return(
         <div className='min-h-screen pt-20 bg-gray-50 dark:bg-gray-900 transition duration-300'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto'>
